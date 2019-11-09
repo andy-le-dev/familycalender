@@ -11,6 +11,7 @@ public class ExampleResourceTest {
 
     @Test
     public void testHelloEndpoint() {
+
         given()
           .when().get("/hello")
           .then()
