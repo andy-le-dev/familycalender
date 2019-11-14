@@ -1,4 +1,4 @@
-package org.acme;
+package com.andyle.fruit;
 
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
@@ -18,5 +18,10 @@ public class Fruit extends PanacheEntity {
 
     public Fruit(String name) {
         this.name = name;
+    }
+
+    public void doSomethingForDebugging() {
+        String val = "sdafa";
+        String val2 = "dasfja fojaf";
     }
 }

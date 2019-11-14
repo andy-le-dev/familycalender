@@ -1,4 +1,4 @@
-package org.acme;
+package com.andyle.fruit;
 
 import java.util.List;
 
@@ -39,6 +39,7 @@ public class FruitResource {
         if (entity == null) {
             throw new WebApplicationException("Fruit with id of " + id + " does not exist.", 404);
         }
+        entity.doSomethingForDebugging();
         return entity;
     }
 
