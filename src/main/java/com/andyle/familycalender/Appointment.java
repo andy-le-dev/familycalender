@@ -7,5 +7,5 @@ import javax.persistence.Entity;
 
 @Entity
 public class Appointment extends CalenderItem{
-    public Date to;
+    public Date toDate;
 }
