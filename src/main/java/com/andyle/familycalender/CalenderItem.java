@@ -1,16 +1,22 @@
 package com.andyle.familycalender;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
+import javax.persistence.*;
 import java.util.Date;
 
-
-import javax.persistence.Entity;
-
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
-
 @Entity
-public abstract class CalenderItem extends PanacheEntity{
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class CalenderItem extends PanacheEntityBase {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    public Long id;
+
     public boolean allDayLong;
     public String title;
-    public Date from;
+
+
+    public Date fromDate;
 
 }
