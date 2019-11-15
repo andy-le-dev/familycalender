@@ -20,7 +20,7 @@ public class AppointmentResource {
 
     @GET
     public List<Appointment> get() {
-        return Appointment.listAll(Sort.by("name"));
+        return Appointment.listAll(Sort.by("fromDate"));
     }
 
     @GET
